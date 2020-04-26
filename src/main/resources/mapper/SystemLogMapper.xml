@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="uTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zys.springboot.annotationdemo.dao.SystemLogDao">
+    <!--插入系统日志-->
+    <insert id="createLog" parameterType="com.zys.springboot.annotationdemo.entity.SystemLog">
+        insert into systemLog values(#{id},#{title},#{describe},sysdate(),#{method},#{error})
+    </insert>
+
+</mapper>

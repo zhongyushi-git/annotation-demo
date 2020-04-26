@@ -1,0 +1,18 @@
+#数据源配置
+spring:
+  datasource:
+    #使用阿里巴巴的druid
+    type: com.alibaba.druid.pool.DruidDataSource
+    #配置数据库的路径和用户名密码
+    url: jdbc:mysql://127.0.0.1:3306/annotation?useUnicode=true&characterEncoding=UTF-8&serverTimezone=CTT&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+
+
+mybatis:
+  mapperLocations: classpath*:mapper/*Mapper.xml
+
+#开启日志打印
+logging:
+  level:
+    com.zys.training: debug
